@@ -57,7 +57,11 @@
     <!-- فورم تسجيل الطلبات -->
     <section class="form-section">
         <h2>📝 تسجيل الطلبات</h2>
-        <form id="requestForm">
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="f0403767-f2f6-43fc-b4a1-8fc5027d708e">
+            <input type="hidden" name="subject" value="New Contact Form Submission from your Website">
+            <input type="hidden" name="from_name" value="SGSC Website">
+            <input type="hidden" name="redirect" value="https://sgsc-web.github.io/site/contact.html?status=success">
             <div>
                 <label for="name">الاسم *</label>
                 <input type="text" id="name" name="name" required>
@@ -99,8 +103,17 @@
                 <textarea id="other" name="other" placeholder="برجاء توضيح تفاصيل إضافية إن وجدت..."></textarea>
             </div>
 
-            <button type="submit" class="submit-btn">إرسال الطلب</button>
+            <button type="submit" class="submit-btn" id="submitBtn">إرسال الطلب</button>
         </form>
+        
+        <!-- Success Message -->
+        <div id="successMessage" class="success-message" style="display: none;">
+            <div class="success-content">
+                <div class="success-icon">✓</div>
+                <h3>تم إرسال طلبكم بنجاح!</h3>
+                <p>شكراً لتواصلكم معنا. سنقوم بالرد عليكم في أقرب وقت ممكن.</p>
+            </div>
+        </div>
     </section>
 </main>
 
@@ -121,6 +134,71 @@
     </div>
     <p>&copy; 2025 SGSC - Sustainable Green Solutions and Consulting. جميع الحقوق محفوظة.</p>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form[action="https://api.web3forms.com/submit"]');
+    const submitBtn = document.getElementById('submitBtn');
+    const successMessage = document.getElementById('successMessage');
+
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        // Change button text to show loading
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'جاري الإرسال...';
+        submitBtn.disabled = true;
+
+        try {
+            // Create FormData object
+            const formData = new FormData(form);
+            
+            // Send form data to Web3Forms
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                // Show success message
+                successMessage.style.display = 'flex';
+                setTimeout(() => {
+                    successMessage.classList.add('show');
+                }, 10);
+                
+                // Reset form
+                form.reset();
+                
+                // Hide success message after 4 seconds
+                setTimeout(() => {
+                    successMessage.classList.remove('show');
+                    setTimeout(() => {
+                        successMessage.style.display = 'none';
+                    }, 300);
+                }, 4000);
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            alert('حدث خطأ أثناء إرسال النموذج. يرجى المحاولة مرة أخرى.');
+        } finally {
+            // Reset button
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }
+    });
+
+    // Close success message when clicking outside
+    successMessage.addEventListener('click', function(e) {
+        if (e.target === successMessage) {
+            successMessage.classList.remove('show');
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 300);
+        }
+    });
+});
+</script>
 
 </body>
 </html>

@@ -49,8 +49,8 @@ body {
 
 .logo img {
     /* يجب استبدال هذا برمز SGSC الحقيقي */
-    width: 45px;
-    height: 45px;
+    width: 100px;
+    height: auto;
     margin-left: 10px;
 }
 

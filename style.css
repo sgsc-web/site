@@ -6,6 +6,8 @@
     --background-color: #F7F2E0; /* بيج فاتح للخلفية */
     --text-color: #333333; /* لون النصوص الأساسية */
     --accent-color: #D4AF37; /* لون ذهبي بسيط للتمييز إذا لزم الأمر */
+    --footer-background-color: #F7F2E0; /* Yellowish background from the image */
+    --footer-text-color: #1F694F; /* Green text from the image */
 }
 
 /* التنسيقات الأساسية */
@@ -21,7 +23,7 @@ body {
 
 /* شريط التنقل (Navigation Bar) */
 .navbar {
-    background-color: var(--primary-color);
+    background-color: var(--footer-background-color);
     padding: 15px 0;
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     position: sticky;
@@ -39,7 +41,7 @@ body {
 }
 
 .logo a {
-    color: white;
+    color: var(--primary-color);
     font-size: 28px;
     font-weight: bold;
     text-decoration: none;
@@ -55,7 +57,7 @@ body {
 }
 
 .nav-links a {
-    color: white;
+    color: var(--primary-color);
     text-decoration: none;
     margin-right: 25px;
     font-size: 17px;
@@ -135,8 +137,8 @@ table th {
 
 /* الفوتر (Footer) */
 .footer {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--footer-background-color);
+    color: var(--footer-text-color);
     text-align: center;
     padding: 25px 0;
     margin-top: 50px;

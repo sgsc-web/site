@@ -232,6 +232,7 @@ table th {
         position: absolute;
         top: 120px;
         right: 0;
+        left: 0;
         box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     }
 
@@ -244,6 +245,7 @@ table th {
         padding: 15px;
         width: 100%;
         border-bottom: 1px solid var(--primary-color);
+        box-sizing: border-box;
     }
 
     .menu-toggle {

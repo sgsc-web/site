@@ -23,10 +23,11 @@
             padding: 40px 20px;
         }
 
-        h1 {
+        h1, h2 {
             color: #222;
         }
 
+        /* أزرار التواصل */
         .contact-buttons {
             display: flex;
             flex-direction: column;
@@ -68,6 +69,61 @@
         .contact-btn:hover {
             transform: scale(1.05);
             opacity: 0.9;
+        }
+
+        /* فورم تسجيل الطلبات */
+        .form-section {
+            background: #fff;
+            margin-top: 40px;
+            padding: 25px 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        input, select, textarea {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-family: "Cairo", sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #28a745;
+            outline: none;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .submit-btn {
+            background-color: #28a745;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #218838;
         }
 
         /* Footer Styling */
@@ -136,6 +192,55 @@
                 <i class="fab fa-linkedin-in"></i> تواصل عبر لينكدإن
             </a>
         </div>
+    </section>
+
+    <!-- فورم تسجيل الطلبات -->
+    <section class="form-section">
+        <h2>📝 تسجيل الطلبات</h2>
+        <form id="requestForm">
+            <div>
+                <label for="name">الاسم *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div>
+                <label for="idNumber">رقم البطاقة *</label>
+                <input type="text" id="idNumber" name="idNumber" required>
+            </div>
+
+            <div>
+                <label for="email">البريد الإلكتروني *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div>
+                <label for="qualification">المؤهل *</label>
+                <input type="text" id="qualification" name="qualification" required>
+            </div>
+
+            <div>
+                <label for="job">الوظيفة</label>
+                <input type="text" id="job" name="job">
+            </div>
+
+            <div>
+                <label for="purpose">الغرض من التواصل</label>
+                <select id="purpose" name="purpose">
+                    <option value="">-- اختر الغرض --</option>
+                    <option value="training">طلب تدريب</option>
+                    <option value="consulting">استشارة</option>
+                    <option value="partnership">شراكة</option>
+                    <option value="other">أخرى</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="other">أخرى:</label>
+                <textarea id="other" name="other" placeholder="برجاء توضيح تفاصيل إضافية إن وجدت..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">إرسال الطلب</button>
+        </form>
     </section>
 </main>
 

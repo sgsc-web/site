@@ -5,6 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SGSC - تواصل معنا</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: "Cairo", sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            direction: rtl;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            color: #222;
+        }
+
+        .contact-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .contact-btn i {
+            font-size: 1.4rem;
+        }
+
+        .contact-btn.whatsapp {
+            background-color: #25d366;
+        }
+        .contact-btn.email {
+            background-color: #ff6b6b;
+        }
+        .contact-btn.facebook {
+            background-color: #1877f2;
+        }
+        .contact-btn.linkedin {
+            background-color: #0077b5;
+        }
+
+        .contact-btn:hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
+        /* Footer Styling */
+        footer.footer {
+            text-align: center;
+            padding: 25px 10px;
+            background: #222;
+            color: #fff;
+            margin-top: 50px;
+        }
+
+        .footer .social-mini {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 10px;
+        }
+
+        .footer .social-mini a {
+            color: #fff;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .footer .social-mini a:hover {
+            color: #25d366;
+        }
+    </style>
 </head>
 <body>
 
@@ -24,38 +115,45 @@
 </nav>
 
 <main class="container">
-
     <section class="section">
         <h1>📞 تواصل معنا</h1>
-
         <p>نحن جاهزون للرد على استفساراتكم وتلبية احتياجاتكم التدريبية والاستشارية في مجالات الحلال والجودة والزراعة.</p>
 
-        <div class="contact-info">
-            <div class="contact-item">
-                <span>📱</span>
-                <p>رقم الهاتف: **01558794084**</p>
-            </div>
-            <div class="contact-item">
-                <span>📧</span>
-                <p>البريد الإلكتروني: **sgsccompany@gmail.com**</p>
-            </div>
-            <div class="contact-item">
-                <span>📍</span>
-                <p>العنوان: **New Cairo, Fifth Settlement, Gardenia Heights 1**</p>
-            </div>
+        <div class="contact-buttons">
+            <a href="https://wa.me/201558794084" target="_blank" class="contact-btn whatsapp">
+                <i class="fab fa-whatsapp"></i> تواصل عبر واتساب
+            </a>
+
+            <a href="mailto:sgsccompany@gmail.com" class="contact-btn email">
+                <i class="fa-solid fa-envelope"></i> تواصل عبر البريد الإلكتروني
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61557144825099" target="_blank" class="contact-btn facebook">
+                <i class="fab fa-facebook-f"></i> تواصل عبر فيسبوك
+            </a>
+
+            <a href="https://www.linkedin.com/company/102251252/admin/dashboard/" target="_blank" class="contact-btn linkedin">
+                <i class="fab fa-linkedin-in"></i> تواصل عبر لينكدإن
+            </a>
         </div>
     </section>
-
-    <section class="section">
-        <h2>موقعنا على الخريطة</h2>
-        <div style="height: 400px; width: 100%; margin-top: 20px;">
-            <p>يرجى إضافة رمز تضمين خريطة Google (iframe) لموقع New Cairo, Fifth Settlement, Gardenia Heights 1.</p>
-        </div>
-    </section>
-
 </main>
 
 <footer class="footer">
+    <div class="social-mini">
+        <a href="https://www.facebook.com/profile.php?id=61557144825099" target="_blank" title="فيسبوك">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/102251252/admin/dashboard/" target="_blank" title="لينكدإن">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://wa.me/201558794084" target="_blank" title="واتساب">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="mailto:sgsccompany@gmail.com" title="البريد الإلكتروني">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+    </div>
     <p>&copy; 2025 SGSC - Sustainable Green Solutions and Consulting. جميع الحقوق محفوظة.</p>
 </footer>
 

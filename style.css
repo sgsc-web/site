@@ -458,3 +458,59 @@ table th {
     color: #555;
     font-size: 16px;
 }
+
+/* Hero Image Styles */
+.hero-image-container {
+    text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.hero-image:hover {
+    transform: scale(1.03);
+}
+
+/* Two-column layout for sections */
+.two-column-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.column-text {
+    flex: 2; /* Give more space to text */
+}
+
+.column-image {
+    flex: 1;
+    text-align: center;
+}
+
+.column-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease-in-out;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.column-image img:hover {
+    transform: scale(1.03);
+}
+
+/* Responsive for two-column layout */
+@media (max-width: 768px) {
+    .two-column-section {
+        flex-direction: column-reverse; /* Image will be on top on mobile */
+    }
+}

@@ -113,11 +113,12 @@ body {
 /* 🌟 تنسيق قسم الـ Hero (الترويسة الكبيرة) 🌟 */
 .hero-section {
     position: relative;
-    height: 400px;
+    min-height: 350px; /* استخدام ارتفاع أدنى للسماح بالتمدد */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 40px 20px; /* إضافة مساحة داخلية */
     margin-bottom: 40px;
     border-radius: 12px;
     overflow: hidden;
@@ -125,6 +126,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    box-sizing: border-box; /* لضمان حساب المساحة بشكل صحيح */
 }
 
 /* صور خلفية الـ Hero الخاصة بكل صفحة */
@@ -637,7 +639,8 @@ h2:hover {
 
     /* Hero Section */
     .hero-section {
-        height: 300px;
+        min-height: auto; /* إلغاء الارتفاع الثابت والسماح للمحتوى بتحديد الارتفاع */
+        padding: 60px 20px; /* زيادة المساحة الداخلية على الموبايل */
     }
     .hero-content h1 {
         font-size: 30px;

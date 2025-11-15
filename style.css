@@ -13,7 +13,7 @@
 
 /* التنسيقات الأساسية */
 body {
-    direction: rtl; /* لجعل النص من اليمين لليسار (اللغة العربية) */
+    direction: rtl;
     font-family: 'Cairo', sans-serif;
     margin: 0;
     padding: 0;
@@ -26,19 +26,19 @@ body {
 .navbar {
     background-color: var(--footer-background-color);
     padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
     position: sticky;
     top: 0;
     z-index: 1000;
 }
 
 .navbar-container {
-    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 5%;
+    padding: 0 20px;
     box-sizing: border-box;
 }
 
@@ -53,7 +53,6 @@ body {
 }
 
 .logo img {
-    /* يجب استبدال هذا برمز SGSC الحقيقي */
     width: 100px;
     height: auto;
     margin-bottom: 0px;
@@ -90,11 +89,11 @@ body {
 
 /* الأقسام الرئيسية في الصفحة */
 .container {
-    width: 100%;
-    margin: 0;
-    padding: 30px 5%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px 40px;
     background-color: white;
-    border-radius: 0;
+    border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     animation: fadeIn 1s ease-in-out;
     box-sizing: border-box;
@@ -109,6 +108,96 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* 🌟 تنسيق قسم الـ Hero (الترويسة الكبيرة) 🌟 */
+.hero-section {
+    position: relative;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* صور خلفية الـ Hero الخاصة بكل صفحة */
+.hero-section:not(.programs-hero) {
+    background-image: url('1.jpeg');
+}
+.programs-hero {
+    background-image: url('11.jpeg');
+    /* تم تطبيق الإزاحة هنا للحصول على صورة أوضح */
+    background-position: 70% 70%;
+}
+
+/* إضافة طبقة تظليل (Overlay) لجعل النص مقروءاً */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.65); /* 🌟 [تعديل نهائي] زيادة التظليل إلى 0.65 🌟 */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    color: white;
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.hero-content .sub-heading {
+    color: var(--accent-color);
+    font-size: 24px;
+    border-bottom: none;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* تنسيق زر الدعوة للإجراء (CTA) */
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:hover {
+    background-color: #c9a030;
+    transform: translateY(-3px);
+}
+
+.intro-paragraph {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: center;
+    margin: 30px 0;
+    padding: 0 5%;
 }
 
 h1, h2, h3 {
@@ -127,6 +216,84 @@ h2:hover {
     transform: scale(1.02);
 }
 
+.section {
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+/* 🌟 تنسيق قسم العمودين (Flexbox) 🌟 */
+.content-with-image, .two-column-section {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.content-with-image.reverse-layout {
+    flex-direction: row-reverse;
+}
+
+.column-text {
+    flex: 3;
+    min-width: 0;
+}
+
+/* تنسيق عمود الصورة - يدعم صورة واحدة أو صور متعددة (Grid) */
+.column-image {
+    flex: 2;
+    max-width: 450px;
+    margin: 0;
+    padding: 10px;
+    background: #f0f0f0;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+
+    /* تطبيق Grid لعرض الصور المتعددة داخل العمود */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+.column-image:hover, .hero-image-container:hover {
+    transform: scale(1.03);
+}
+
+.client-image, .column-image > img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.column-image img { /* صور متعددة داخل عمود */
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    border: 3px solid rgba(31, 105, 79, 0.5);
+    box-sizing: border-box;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+
+.column-image img:hover {
+    transform: scale(1.05);
+}
+
+/* إلغاء التنسيقات القديمة المتعارضة */
+.hero-image-container, .hero-image-container:hover, .hero-image {
+    display: none !important;
+}
+
 /* تنسيق قائمة المزايا والنقاط */
 .feature-list {
     list-style: none;
@@ -134,7 +301,7 @@ h2:hover {
 }
 
 .feature-list li {
-    background: #e6f1ec; /* لون فاتح من نفس العائلة */
+    background: #e6f1ec;
     color: var(--text-color);
     padding: 15px;
     margin-bottom: 10px;
@@ -164,24 +331,15 @@ h2:hover {
     font-size: 1.2em;
 }
 
-/* تنسيق الجداول */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
+/* تنسيق الروابط داخل أقسام الخدمات لصفحة about */
+.column-text ol h3 {
+    margin-top: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    font-size: 20px;
+}
+.column-text ol p {
     font-size: 16px;
-}
-
-table th, table td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: right;
-}
-
-table th {
-    background-color: var(--primary-color);
-    color: white;
-    font-weight: bold;
 }
 
 /* الفوتر (Footer) */
@@ -193,113 +351,67 @@ table th {
     margin-top: 50px;
 }
 
-/* قسم التواصل */
-.contact-info {
+/* Footer Social Icons */
+.footer .social-mini {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    font-size: 18px;
-    padding: 20px;
-    border: 1px dashed var(--primary-color);
-    border-radius: 8px;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
 }
 
-.contact-item {
-    display: flex;
-    align-items: center;
+.footer .social-mini a {
+    color: var(--footer-text-color);
+    font-size: 1.4rem;
+    transition: color 0.3s;
 }
 
-.contact-item span {
-    margin-left: 15px;
-    color: var(--primary-color);
-    font-weight: bold;
+.footer .social-mini a:hover {
+    color: #25d366;
 }
 
-/* Hamburger Menu */
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--primary-color);
-    font-size: 30px;
-    cursor: pointer;
-}
+/* ======================================= */
+/* تنسيقات صفحة التواصل (Contact Page) */
+/* ======================================= */
 
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: var(--footer-background-color);
-        position: absolute;
-        top: 120px;
-        right: 0;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links a {
-        text-align: center;
-        padding: 15px;
-        width: 100%;
-        border-bottom: 1px solid var(--primary-color);
-        box-sizing: border-box;
-        margin: 0;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .navbar-container {
-        justify-content: space-between;
-    }
-}
-
-/* Styles for Contact Page */
 .contact-page-container {
     max-width: 800px;
+    margin: 20px auto;
+    padding: 30px 40px;
 }
 
-.contact-page-container h1,
-.contact-page-container h2 {
-    color: #222;
-}
-
-/* Contact Buttons */
+/* قسم أزرار التواصل */
 .contact-buttons {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-top: 30px;
+    margin-bottom: 50px;
 }
 
 .contact-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
     text-decoration: none;
-    padding: 12px 20px;
-    border-radius: 8px;
+    padding: 15px 20px;
+    border-radius: 10px;
     color: #fff;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    transition: transform 0.2s, opacity 0.2s;
+    transition: transform 0.2s, opacity 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .contact-btn i {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
 }
 
 .contact-btn.whatsapp {
     background-color: #25d366;
 }
 .contact-btn.email {
-    background-color: #ff6b6b;
+    background-color: #e56b6b;
 }
 .contact-btn.facebook {
     background-color: #1877f2;
@@ -309,39 +421,43 @@ table th {
 }
 
 .contact-btn:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
+    transform: scale(1.02);
+    opacity: 0.95;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Contact Form Section */
+/* تنسيق قسم النموذج (Form Section) */
 .form-section {
-    background: #fff;
+    background: #f7f7f7;
     margin-top: 40px;
-    padding: 25px 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .form-section form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 18px;
 }
 
 .form-section label {
     font-weight: bold;
-    color: #333;
+    color: var(--primary-color);
     margin-bottom: 5px;
+    display: block;
 }
 
 .form-section input,
 .form-section select,
 .form-section textarea {
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
     font-family: "Cairo", sans-serif;
     font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
     transition: border-color 0.3s;
 }
 
@@ -362,33 +478,17 @@ table th {
     color: #fff;
     font-weight: bold;
     border: none;
-    padding: 12px;
-    border-radius: 8px;
+    padding: 15px;
+    border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s;
+    margin-top: 10px;
 }
 
 .submit-btn:hover {
-    background-color: #1a5943; /* Darker shade of primary color */
+    background-color: #1a5943;
 }
 
-/* Footer Social Icons */
-.footer .social-mini {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 10px;
-}
-
-.footer .social-mini a {
-    color: var(--footer-text-color);
-    font-size: 1.2rem;
-    transition: color 0.3s;
-}
-
-.footer .social-mini a:hover {
-    color: #25d366;
-}
 
 /* Success Message Styles */
 .success-message {
@@ -461,81 +561,106 @@ table th {
     font-size: 16px;
 }
 
-/* Hero Image Styles */
-.hero-image-container {
-    text-align: center;
-    margin-bottom: 20px;
-    animation: fadeIn 1.5s ease-in-out;
-    display: inline-block;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-    overflow: hidden;
+/* ======================================= */
+/* 🌟 التجاوب (Responsiveness) 🌟 */
+/* ======================================= */
+
+/* Hamburger Menu 🌟 [تعديل] إخفاء الزر بشكل افتراضي 🌟 */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 30px;
+    cursor: pointer;
 }
 
-.hero-image-container:hover, .column-image:hover {
-    transform: scale(1.03);
+/* شاشات متوسطة (Tablets) */
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 36px;
+    }
+    .hero-content .sub-heading {
+        font-size: 20px;
+    }
+    .container {
+        padding: 20px;
+    }
+    .content-with-image, .two-column-section {
+        gap: 20px;
+        padding: 15px;
+    }
 }
 
-.hero-image {
-    width: calc(100% + 16px);
-    height: calc(100% + 16px);
-    margin: -8px;
-    border-radius: 15px;
-    display: block;
-    border: 4px solid rgba(31, 105, 79, 0.5);
-    box-sizing: border-box;
-    object-fit: cover;
-}
-
-/* Two-column layout for sections */
-.two-column-section {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.column-text {
-    flex: 2; /* Give more space to text */
-}
-
-.column-image {
-    flex: 1;
-    max-width: 120px; /* Control the max size of the image container */
-    margin-left: auto; /* Adjust alignment in the flex layout */
-    text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-    animation: fadeIn 1.5s ease-in-out;
-    overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    background: #f0f0f0;
-}
-
-.column-image img {
-    width: 120px;
-    height: 120px;
-    border-radius: 10px;
-    border: 3px solid rgba(31, 105, 79, 0.5);
-    box-sizing: border-box;
-    object-fit: cover;
-    transition: transform 0.2s;
-}
-
-.column-image img:hover {
-    transform: scale(1.1);
-}
-
-/* Responsive for two-column layout */
+/* شاشات صغيرة (Mobile) */
 @media (max-width: 768px) {
-    .two-column-section {
-        flex-direction: column-reverse; /* Image will be on top on mobile */
+    /* Navbar */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--footer-background-color);
+        position: absolute;
+        top: 120px;
+        right: 0;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        text-align: center;
+        padding: 15px;
+        width: 100%;
+        border-bottom: 1px solid var(--primary-color);
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    .menu-toggle {
+        display: block; /* 🌟 [تعديل] إظهار الزر على الموبايل 🌟 */
+        font-weight: bold; /* 🌟 [تعديل] لجعل شكل الزر (☰) أثخن 🌟 */
+        font-size: 40px; /* 🌟 [تعديل] لتكبير حجم الزر وجعله بارزاً 🌟 */
+        line-height: 1;
+    }
+
+    .navbar-container {
+        justify-content: space-between;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        height: 300px;
+    }
+    .hero-content h1 {
+        font-size: 30px;
+    }
+    .hero-content .sub-heading {
+        font-size: 18px;
+    }
+
+    /* Column Layouts */
+    .content-with-image, .two-column-section {
+        flex-direction: column-reverse;
+    }
+
+    .content-with-image.reverse-layout {
+        flex-direction: column-reverse;
+    }
+
+    .column-text, .column-image {
+        flex: auto;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .column-image {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .contact-page-container {
+        padding: 15px;
     }
 }

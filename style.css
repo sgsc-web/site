@@ -373,6 +373,11 @@ h2:hover {
 /* تنسيقات صفحة التواصل (Contact Page) */
 /* ======================================= */
 
+#special-image {
+    object-fit: contain;
+    height: auto;
+}
+
 .contact-page-container {
     max-width: 800px;
     margin: 20px auto;

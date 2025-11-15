@@ -130,13 +130,17 @@ body {
 }
 
 /* صور خلفية الـ Hero الخاصة بكل صفحة */
-.hero-section:not(.programs-hero) {
+.hero-section:not(.programs-hero):not(.about-hero) {
     background-image: url('1.jpeg');
 }
 .programs-hero {
     background-image: url('11.jpeg');
     /* تم تطبيق الإزاحة هنا للحصول على صورة أوضح */
     background-position: 70% 70%;
+}
+
+.about-hero {
+    background-image: url('12.jpeg');
 }
 
 /* إضافة طبقة تظليل (Overlay) لجعل النص مقروءاً */

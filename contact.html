@@ -57,60 +57,65 @@
         <h2>📝 تسجيل الطلبات</h2>
         <form action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="f0403767-f2f6-43fc-b4a1-8fc5027d708e">
-            <input type="hidden" name="subject" value="New Contact Form Submission from your Website">
+            <input type="hidden" name="subject" value="طلب تسجيل جديد - SGSC">
             <input type="hidden" name="from_name" value="SGSC Website">
-            <input type="hidden" name="redirect" value="https://sgsc-web.github.io/site/contact.html?status=success">
+
+            <!-- اسم الجهة -->
             <div>
-                <label for="name">الاسم *</label>
-                <input type="text" id="name" name="name" required>
+                <label for="organization">اسم الجهة *</label>
+                <input type="text" id="organization" name="organization" required>
             </div>
 
+            <!-- الاسم ثلاثي بالعربي -->
+            <div>
+                <label for="name_ar">الاسم ثلاثي بالعربي *</label>
+                <input type="text" id="name_ar" name="name_ar" required>
+            </div>
+
+            <!-- الاسم ثلاثي بالإنجليزي -->
+            <div>
+                <label for="name_en">الاسم ثلاثي بالإنجليزي *</label>
+                <input type="text" id="name_en" name="name_en" required>
+            </div>
+
+            <!-- رقم البطاقة -->
             <div>
                 <label for="idNumber">رقم البطاقة *</label>
                 <input type="text" id="idNumber" name="idNumber" required>
             </div>
 
+            <!-- الوظيفة -->
+            <div>
+                <label for="job">الوظيفة *</label>
+                <input type="text" id="job" name="job" required>
+            </div>
+
+            <!-- رقم الموبايل -->
+            <div>
+                <label for="phone">رقم الموبايل *</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <!-- البريد الإلكتروني -->
             <div>
                 <label for="email">البريد الإلكتروني *</label>
                 <input type="email" id="email" name="email" required>
             </div>
 
+            <!-- التدريب -->
             <div>
-                <label for="qualification">المؤهل *</label>
-                <input type="text" id="qualification" name="qualification" required>
-            </div>
-
-            <div>
-                <label for="job">الوظيفة</label>
-                <input type="text" id="job" name="job">
-            </div>
-
-            <div>
-                <label for="purpose">الغرض من التواصل</label>
-                <select id="purpose" name="purpose">
-                    <option value="">-- اختر الغرض --</option>
-                    <option value="training">طلب تدريب</option>
-                    <option value="consulting">استشارة</option>
-                    <option value="partnership">شراكة</option>
-                    <option value="other">أخرى</option>
+                <label for="training">التدريب *</label>
+                <select id="training" name="training" required>
+                    <option value="">-- اختر التدريب --</option>
+                    <option value="food_quality">الجودة الغذائية</option>
+                    <option value="agriculture">الزراعة</option>
+                    <option value="halal">حلال</option>
+                    <option value="marketing">التسويق</option>
                 </select>
-            </div>
-
-            <div>
-                <label for="other">أخرى:</label>
-                <textarea id="other" name="other" placeholder="برجاء توضيح تفاصيل إضافية إن وجدت..."></textarea>
             </div>
 
             <button type="submit" class="submit-btn" id="submitBtn">إرسال الطلب</button>
         </form>
-
-        <div id="successMessage" class="success-message" style="display: none;">
-            <div class="success-content">
-                <div class="success-icon">✓</div>
-                <h3>تم إرسال طلبكم بنجاح!</h3>
-                <p>شكراً لتواصلكم معنا. سنقوم بالرد عليكم في أقرب وقت ممكن.</p>
-            </div>
-        </div>
     </section>
 </main>
 

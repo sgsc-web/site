@@ -3,58 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SGSC - تواصل معنا</title>
-    <link rel="stylesheet" href="style.css">
+    <title>تواصل معنا | SGSC</title>
+    <meta name="description" content="تواصل مع SGSC عبر الهاتف أو واتساب أو البريد الإلكتروني، أو قدّم طلب التسجيل في البرامج التدريبية. مكاتبنا في القاهرة الجديدة وأسيوط.">
+    <meta name="theme-color" content="#045415">
+    <link rel="canonical" href="https://sgsc-web.github.io/site/contact.html">
+    <link rel="icon" type="image/png" href="logo.png">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:site_name" content="SGSC - الحلول الخضراء المستدامة والاستشارات">
+    <meta property="og:title" content="تواصل معنا | SGSC">
+    <meta property="og:description" content="تواصل مع SGSC عبر الهاتف أو واتساب أو البريد الإلكتروني، أو قدّم طلب التسجيل في البرامج التدريبية. مكاتبنا في القاهرة الجديدة وأسيوط.">
+    <meta property="og:url" content="https://sgsc-web.github.io/site/contact.html">
+    <meta property="og:image" content="https://sgsc-web.github.io/site/assets/img/hero-field.webp">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Main Arabic font preloaded; stylesheet and script are shared by every page -->
+    <link rel="preload" href="assets/fonts/cairo-arabic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <!-- Organization structured data -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "شركة الحلول الخضراء المستدامة والاستشارات",
+  "alternateName": "Sustainable Green Solutions and Consulting (SGSC)",
+  "url": "https://sgsc-web.github.io/site/",
+  "logo": "https://sgsc-web.github.io/site/logo.png",
+  "foundingDate": "2025",
+  "description": "استشارات وتدريب وتنفيذ مشروعات التنمية المستدامة في الزراعة وسلامة الغذاء والحلال والطاقة المتجددة والتنمية المجتمعية.",
+  "email": "sgsccompany@gmail.com",
+  "telephone": "+201024304084",
+  "identifier": "السجل التجاري 11424",
+  "address": [
+    {
+      "@type": "PostalAddress",
+      "addressLocality": "القاهرة الجديدة",
+      "streetAddress": "التجمع الخامس – جاردينيا هايتس 1",
+      "addressCountry": "EG"
+    },
+    {
+      "@type": "PostalAddress",
+      "addressLocality": "أسيوط",
+      "streetAddress": "مجمع كيان التجاري – أمام جامعة أسيوط",
+      "addressCountry": "EG"
+    }
+  ],
+  "sameAs": [
+    "https://www.facebook.com/share/1B5XqvGDEp",
+    "https://www.linkedin.com/company/sgsc-egypt/",
+    "https://wa.me/201558794084"
+  ]
+}
+    </script>
 </head>
 <body>
+<a class="skip-link" href="#main">تخطَّ إلى المحتوى</a>
 
-<nav class="navbar">
-    <div class="navbar-container">
+<header class="navbar">
+    <div class="container navbar-container">
         <div class="logo">
-            <img src="logo.png" alt="SGSC Logo">
-            <a href="index.html">SGSC</a>
+            <a href="index.html" aria-label="SGSC - الصفحة الرئيسية">
+                <img src="logo.png" width="280" height="153" alt="شعار SGSC">
+                <span>SGSC</span>
+            </a>
         </div>
-        <button class="menu-toggle" id="mobile-menu">
-            &#9776;
-        </button>
-        <div class="nav-links" id="nav-links">
+        <button class="menu-toggle" id="mobile-menu" type="button" aria-label="القائمة الرئيسية" aria-expanded="false" aria-controls="nav-links">&#9776;</button>
+        <nav class="nav-links" id="nav-links" aria-label="التنقل الرئيسي">
             <a href="index.html">الرئيسية</a>
             <a href="about.html">من نحن</a>
+            <a href="services.html">الخدمات</a>
             <a href="programs.html">البرامج التدريبية</a>
-            <a href="contact.html">تواصل معنا</a>
-        </div>
+            <a href="portfolio.html">سابقة الأعمال</a>
+            <a href="contact.html" aria-current="page">تواصل معنا</a>
+        </nav>
     </div>
-</nav>
-<script src="script.js"></script>
+</header>
 
-<main class="container contact-page-container">
-    <section class="section">
-        <h1>📞 تواصل معنا</h1>
-        <p>نحن جاهزون للرد على استفساراتكم وتلبية احتياجاتكم التدريبية والاستشارية في مجالات الحلال والجودة والزراعة.</p>
-
-        <div class="contact-buttons">
-            <a href="https://wa.me/201558794084" target="_blank" class="contact-btn whatsapp">
-                <i class="fab fa-whatsapp"></i> تواصل عبر واتساب
-            </a>
-
-            <a href="mailto:sgsccompany@gmail.com" class="contact-btn email">
-                <i class="fa-solid fa-envelope"></i> تواصل عبر البريد الإلكتروني
-            </a>
-
-            <a href="https://www.facebook.com/share/1B5XqvGDEp" target="_blank" class="contact-btn facebook">
-                <i class="fab fa-facebook-f"></i> تواصل عبر فيسبوك
-            </a>
-
-            <a href="https://www.linkedin.com/company/sgsc-egypt/" target="_blank" class="contact-btn linkedin">
-                <i class="fab fa-linkedin-in"></i> تواصل عبر لينكدإن
-            </a>
+<main id="main">
+    <section class="hero hero--page wave-bottom">
+        <img src="assets/img/svc-iot-farming.webp" width="1000" height="674" alt="" class="hero-bg" fetchpriority="high" aria-hidden="true">
+        <div class="container hero-content">
+            <h1>تواصل معنا</h1>
+            <p class="lead">نحن جاهزون للرد على استفساراتكم وتلبية احتياجاتكم التدريبية والاستشارية في مجالات الحلال والجودة والزراعة</p>
         </div>
     </section>
 
-    <section class="form-section">
-        <h2>📝 تسجيل الطلبات</h2>
+
+    <section class="section" aria-labelledby="ch-h">
+        <div class="container">
+            <div class="section-head reveal"><span class="eyebrow">قنوات التواصل</span><h2 id="ch-h">تواصل معنا مباشرة</h2></div>
+            <div class="contact-buttons">
+                <a href="https://wa.me/201558794084" target="_blank" rel="noopener" class="contact-btn whatsapp"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-whatsapp"/></svg> تواصل عبر واتساب</a>
+                <a href="mailto:sgsccompany@gmail.com" class="contact-btn email"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-mail"/></svg> تواصل عبر البريد الإلكتروني</a>
+                <a href="https://www.facebook.com/share/1B5XqvGDEp" target="_blank" rel="noopener" class="contact-btn facebook"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-facebook"/></svg> تواصل عبر فيسبوك</a>
+                <a href="https://www.linkedin.com/company/sgsc-egypt/" target="_blank" rel="noopener" class="contact-btn linkedin"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-linkedin"/></svg> تواصل عبر لينكدإن</a>
+            </div>
+            <p style="text-align:center"><a class="btn btn--green" href="assets/company-profile.pdf" download><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-download"/></svg> تحميل ملف تعريف الشركة (PDF)</a></p>
+        </div>
+    </section>
+
+    <section class="section section--white wave-top--white" aria-labelledby="off-h">
+        <div class="container">
+            <div class="section-head reveal"><span class="eyebrow">بيانات التواصل والتسجيل الرسمية</span><h2 id="off-h">بيانات الشركة</h2></div>
+            <div class="info-grid"><div class="info-card reveal"><span class="icon-badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-building"/></svg></span><div><h3>اسم الشركة بالعربية</h3><p>شركة الحلول الخضراء المستدامة والاستشارات</p></div></div><div class="info-card reveal"><span class="icon-badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-globe"/></svg></span><div><h3>الاسم بالإنجليزية</h3><p><span class="ltr">Sustainable Green Solutions and Consulting (SGSC)</span></p></div></div><div class="info-card reveal"><span class="icon-badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-doc"/></svg></span><div><h3>السجل التجاري وسنة التأسيس</h3><p>رقم السجل التجاري: <span class='ltr'>11424</span> · سنة التأسيس: 2025</p></div></div><div class="info-card reveal"><span class="icon-badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-user"/></svg></span><div><h3>المسؤول التنفيذي</h3><p>د. محمود عبد الله</p></div></div><div class="info-card reveal"><span class="icon-badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-pin"/></svg></span><div><h3>المقر – القاهرة الجديدة</h3><p>القاهرة الجديدة – التجمع الخامس – جاردينيا هايتس 1</p></div></div><div class="info-card reveal"><span class="icon-badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-pin"/></svg></span><div><h3>الفرع – أسيوط</h3><p>أسيوط – مجمع كيان التجاري – أمام جامعة أسيوط</p></div></div><div class="info-card reveal"><span class="icon-badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-phone"/></svg></span><div><h3>الهاتف</h3><p><a href="tel:+201024304084" class="ltr">01024304084</a></p></div></div><div class="info-card reveal"><span class="icon-badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-whatsapp"/></svg></span><div><h3>واتساب</h3><p><a href="https://wa.me/201558794084" target="_blank" rel="noopener" class="ltr">01558794084</a></p></div></div><div class="info-card reveal"><span class="icon-badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-mail"/></svg></span><div><h3>البريد الإلكتروني</h3><p><a href="mailto:sgsccompany@gmail.com" class="ltr">sgsccompany@gmail.com</a></p></div></div><div class="info-card reveal"><span class="icon-badge"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-globe"/></svg></span><div><h3>الموقع الإلكتروني</h3><p><a href="https://sgsc-web.github.io/site/index.html" class="ltr">sgsc-web.github.io/site</a></p></div></div></div>
+        </div>
+    </section>
+
+    <section class="section" aria-labelledby="apply-h">
+        <div class="container" style="max-width:860px">
+            <div class="section-head reveal"><span class="eyebrow">التسجيل في التدريب</span><h2 id="apply-h">تسجيل الطلبات</h2></div>
+    <section class="form-section" id="apply">
         <form action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="f0403767-f2f6-43fc-b4a1-8fc5027d708e">
             <input type="hidden" name="subject" value="طلب تسجيل جديد - SGSC">
@@ -125,25 +187,50 @@
             <p>شكراً لتواصلكم معنا. سنقوم بالرد عليكم في أقرب وقت ممكن.</p>
         </div>
     </div>
+        </div>
+    </section>
+
 </main>
 
 <footer class="footer">
-    <div class="social-mini">
-        <a href="https://www.facebook.com/share/1B5XqvGDEp" target="_blank" title="فيسبوك">
-            <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="https://www.linkedin.com/company/sgsc-egypt/" target="_blank" title="لينكدإن">
-            <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://wa.me/201558794084" target="_blank" title="واتساب">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="mailto:sgsccompany@gmail.com" title="البريد الإلكتروني">
-            <i class="fa-solid fa-envelope"></i>
-        </a>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="logo.png" width="280" height="153" alt="شعار SGSC" loading="lazy">
+                <p><strong style="color:#f3dc86">شركة الحلول الخضراء المستدامة والاستشارات</strong><br>
+                <span dir="ltr">Sustainable Green Solutions and Consulting (SGSC)</span></p>
+                <p>نحو تنمية خضراء مستدامة تجمع بين المعرفة العلمية والتطبيق الميداني.</p>
+            </div>
+            <nav aria-label="روابط سريعة">
+                <h2>روابط سريعة</h2>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="about.html">من نحن</a></li>
+                    <li><a href="services.html">الخدمات</a></li>
+                    <li><a href="programs.html">البرامج التدريبية</a></li>
+                    <li><a href="portfolio.html">سابقة الأعمال</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </nav>
+            <div>
+                <h2>تواصل معنا</h2>
+                <ul>
+                    <li><a href="tel:+201024304084"><span class="ltr">01024304084</span></a></li>
+                    <li><a href="https://wa.me/201558794084" target="_blank" rel="noopener">واتساب: <span class="ltr">01558794084</span></a></li>
+                    <li><a href="mailto:sgsccompany@gmail.com"><span class="ltr">sgsccompany@gmail.com</span></a></li>
+                </ul>
+                <div class="social-mini">
+                    <a href="https://www.facebook.com/share/1B5XqvGDEp" target="_blank" rel="noopener" aria-label="فيسبوك"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-facebook"/></svg></a>
+                    <a href="https://www.linkedin.com/company/sgsc-egypt/" target="_blank" rel="noopener" aria-label="لينكدإن"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-linkedin"/></svg></a>
+                    <a href="https://wa.me/201558794084" target="_blank" rel="noopener" aria-label="واتساب"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-whatsapp"/></svg></a>
+                    <a href="mailto:sgsccompany@gmail.com" aria-label="البريد الإلكتروني"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#i-mail"/></svg></a>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 SGSC - Sustainable Green Solutions and Consulting. جميع الحقوق محفوظة.</p>
     </div>
-    <p>&copy; 2025 SGSC - Sustainable Green Solutions and Consulting. جميع الحقوق محفوظة.</p>
 </footer>
+
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
